@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">Tara-J!</string>
+    <string name="title_activity_maps">Tara-J!</string>
+
+    <!-- MAPS ACTIVITY -->
+    <string name="originMarkerDescription">Origin marker</string>
+    <string name="destinationMarkerDescription">Destination marker</string>
+    <string name="buttonTara">Tara!</string>
+    <string name="promptOriginSearchButton">Where do you want to start?</string>
+    <string name="promptDestinationSearchButton">Where do you want to go?</string>
+    <string name="discounted">Discounted</string>
+
+    <!-- ORIGIN -->
+    <string name="promptSearchOrigin">SEARCH AN ORIGIN</string>
+    <string name="setAsOrigin">USE MY LOCATION</string>
+    <string name="originActivityText">Just type in where you want to start.</string>
+
+    <!-- DESTINATION -->
+    <string name="promptSearchDestination">SEARCH A DESTINATION</string>
+    <string name="setAsDestination">USE MY LOCATION</string>
+    <string name="destinationActivityText">Just type in where you want to go.</string>
+
+    <!-- FRAGMENT FARES -->
+    <string name="fare">FARE RATE</string>
+    <string name="descriptionFare1">COMPUTATION OF FARES:</string>
+    <string name="descriptionFare2">First 4 kilometers = ₱8.00</string>
+    <string name="descriptionFare3">Succeeding kilometers = Plus ₱1.50/km</string>
+    <string name="descriptionFare4">STUDENT/ELDERLY/PWD (20% Discount)</string>
+    <string name="descriptionFare5">Succeeding kilometers = Plus ₱1.20/km</string>
+    <string name="descriptionFare6">*If you are a student, you are entitled to a fare discount of the regular fare EVERYDAY upon presentation of your id.</string>
+
+    <!-- ROUTES ACTIVITY -->
+    <string name="promptSelectRoute">SELECT ROUTE</string>
+    <string name="hintSelectRoute">Which route do you want to check?</string>
+
+    <!-- FAREINFO -->
+    <string name="promptSeeMore">Fare Details</string>
+    <string name="titleJeepneyFare">Jeepney Fare</string>
+    <string name="promptCalculatedFare">YOU WILL PAY</string>
+
+    <!-- ABOUT -->
+    <string name="about">     Tara-J! is a Jeepney navigational application exclusive for
+        the AdDU SHS Community. This application aims to provide convenience to the students
+        and teachers in commuting around Davao City.</string>
+</resources>

@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintVertical_bias="0.0"
+            map:layout_constraintBottom_toBottomOf="parent"
+            map:layout_constraintEnd_toEndOf="parent"
+            map:layout_constraintStart_toStartOf="parent"
+            map:layout_constraintTop_toTopOf="parent"
+            tools:context=".MapsActivity" />
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/white_border"
+            app:layout_constraintBottom_toBottomOf="@+id/map"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0">
+
+            <ImageView
+                android:id="@+id/markerOrigin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/buttonOrigin"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="-22dp"
+                android:layout_marginBottom="121dp"
+                android:contentDescription="@string/originMarkerDescription"
+                map:srcCompat="@drawable/usersloacationbb" />
+
+            <ImageView
+                android:id="@+id/markerDestination"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/buttonDestination"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="1dp"
+                android:layout_marginTop="-20dp"
+                android:layout_marginBottom="61dp"
+                android:contentDescription="@string/destinationMarkerDescription"
+                map:layout_constraintBottom_toBottomOf="parent"
+                map:srcCompat="@drawable/destinationbb" />
+
+            <TextView
+                android:id="@+id/origin_name"
+                android:layout_width="192dp"
+                android:layout_height="25dp"
+                android:layout_alignTop="@+id/buttonOrigin"
+                android:layout_alignEnd="@+id/buttonOrigin"
+                android:layout_alignBottom="@+id/buttonOrigin"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="21dp"
+                android:layout_marginBottom="1dp"
+                android:layout_toEndOf="@+id/markerOrigin"
+                android:fontFamily="@font/regularitalic"
+                android:maxLines="1"
+                android:text="@string/promptOriginSearchButton"
+                android:textColor="@color/dark_blue"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/buttonOrigin"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="215dp"
+                android:layout_height="34dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="69dp"
+                android:layout_marginTop="23dp"
+                android:layout_marginEnd="25dp"
+                android:background="@drawable/search_shape" />
+
+            <TextView
+                android:id="@+id/destination_name"
+                android:layout_width="179dp"
+                android:layout_height="26dp"
+                android:layout_alignTop="@+id/buttonDestination"
+                android:layout_alignEnd="@+id/buttonDestination"
+                android:layout_alignBottom="@+id/buttonDestination"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="21dp"
+                android:layout_marginBottom="1dp"
+                android:layout_toEndOf="@+id/markerDestination"
+                android:fontFamily="@font/regularitalic"
+                android:maxLines="1"
+                android:text="@string/promptDestinationSearchButton"
+                android:textColor="@color/dark_blue"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/buttonDestination"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_above="@+id/buttonTara"
+                android:layout_below="@+id/buttonOrigin"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="69dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginBottom="25dp"
+                android:background="@drawable/search_shape"
+                map:layout_constraintEnd_toEndOf="parent"
+                map:layout_constraintStart_toStartOf="parent" />
+
+            <Button
+                android:id="@+id/buttonTara"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="25dp"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/button_tara"
+                android:fontFamily="@font/bold"
+                android:text="@string/buttonTara"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+<!--            <Button-->
+<!--                android:id="@+id/buttonSwitch"-->
+<!--                style="?android:attr/borderlessButtonStyle"-->
+<!--                android:layout_width="33dp"-->
+<!--                android:layout_height="34dp"-->
+<!--                android:layout_alignTop="@+id/buttonTara"-->
+<!--                android:layout_alignParentBottom="true"-->
+<!--                android:layout_marginTop="0dp"-->
+<!--                android:layout_marginEnd="11dp"-->
+<!--                android:layout_marginBottom="25dp"-->
+<!--                android:layout_toStartOf="@+id/buttonTara"-->
+<!--                android:background="@drawable/switchbbutton" />-->
+
+            <Switch
+                android:id="@+id/switchDiscount"
+                android:layout_width="125dp"
+                android:layout_height="30dp"
+                android:layout_alignTop="@+id/buttonTara"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="23dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="25dp"
+                android:text="@string/discounted"
+                android:textColor="@color/dark_blue"
+                android:textSize="15sp"
+                android:checked="false"
+                android:theme="@style/SwitchDiscount"/>
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/fragment_contain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+        <Button
+            android:id="@+id/buttonDrawer"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="40dp"
+            android:layout_height="49dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/strawbmenu"
+            android:fontFamily="@font/bold"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>
+
